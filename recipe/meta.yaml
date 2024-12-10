@@ -10,14 +10,15 @@ source:
   sha256: 2f1d4142a5f09ede52432c772631de11285b7f651ee8747311380092824a208a
 
 build:
-  number: 1008
+  number: 1009
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  skip: True  # [win or py>=313]
+  skip: True  # [win]
 
 requirements:
   host:
     - python
     - pip
+    - setuptools
   run:
     - python
     - pydub
